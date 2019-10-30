@@ -1,10 +1,15 @@
-from typing import List, Any
-from urllib.request import urlopen
+# Determine the longest word within an Input string
 
-with urlopen('http://sixty-north.com/c/t.txt') as story:
-    story_words: List[Any]=[]
-    for line in story:
-        line_words = line.decode("utf-8").split()
-        for word in line_words:
-            story_words.append(word)
-print(story_words)
+# Get input from stdin
+iString = input("Enter a string:")
+
+# Initialize a list
+listOfWords = []
+# Split the string into individual words
+
+iString_words = iString.split()
+
+for word in iString_words:
+    listOfWords.append(word)
+
+print(listOfWords)
